@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Proposal for a microformat for transactions</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+
+  <meta name="description" content="Proposal for a microformat/markup for contract data.">
+  <meta name="language" content="en">
+  <meta name="robots" content="index,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+  <header id="header" class="">
+    <h1 class="title">Microformat structure</h1>
+  </header><!-- /header -->
+  <main>
+    <p>
+      We need the following data points to describe the essential data of a transaction:
+    <div class="container">
+      <div class="container grey">
+        <strong>Parties:</strong> <span class="tag">👨‍👩‍👧 h-card</span>
+        <div class="container silver">
+          <ul>
+            <li>
+              Any number of parties
+            </li>
+            <li>
+              Needs additional data fields, in particular tax ID and VAT number
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container grey">
+        <strong>Transaction:</strong>
+        <div class="container silver">
+          <strong>Type</strong> can be any of the following types (more to be added; these are the most important ones IMO):
+          <div class="container blue">
+            Sale 👉 Transfer of ownership and transfer of money
+          </div>
+          <div class="container blue">
+            Gift 👉 Transfer of ownership for free
+          </div>
+          <div class="container blue">
+            Rent 👉 Transfer of possesion and transfer of money
+          </div>
+          <div class="container blue">
+            Borrow 👉 Transfer of posession for free
+          </div>
+          <div class="container blue">
+            Rendering services 👉 Rendering services and transfer of money
+          </div>
+        </div>
+        <div class="container silver">
+          <strong>Object and service must be specified:</strong>
+          <div class="container blue">
+            Object/service <span class="tag">📦 h-product</span>
+              <div class="container silver">
+                Description
+              </div>
+              <div class="container silver">
+                Amount
+              </div>
+              <div class="container silver">
+                Price
+              </div>
+              <div class="container silver">
+                Terms
+              </div>
+            </div>
+        </div>
+        <div class="container silver">
+          <strong>Terms for <em>this</em> transaction<span class="icon">⚙️</span></strong>
+        </div>
+      </div>
+      <div class="container grey">
+        <strong>Terms for <em>all</em> transactions<span class="icon">⚙️</span></strong>
+      </div>
+      <div class="container grey">
+        <strong>Attachments <span class="icon">📎</span></strong>
+        <div class="container silver">
+          For example PDF receipts <span class="icon">🧾</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <div class="footer__left">
+
+    </div>
+    <div class="footer__center">
+
+    </div>
+    <div class="footer__right">
+      <a href="new_data_structures.html">
+        ▶️
+      </a>
+    </div>
+</body>

@@ -1,0 +1,268 @@
+// Colors
+
+// https://github.com/mrmrs/colors/blob/master/LICENSE.md
+// The MIT License (MIT)
+
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime:  #01FF70;
+
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+
+$white:  #FFFFFF;
+$silver: #DDDDDD;
+$grey:   #AAAAAA;
+$black: #111111;
+
+
+$max-container-width: 900px;
+
+@mixin colors {
+  &.navy {
+    background: $navy;
+    color: $blue;
+  }
+
+  &.blue {
+    background: $blue;
+    color: $aqua;
+  }
+
+  &.aqua {
+    background: $aqua;
+    color: $navy;
+  }
+
+  &.yellow {
+    background: $yellow;
+    color: $black;
+  }
+
+  &.red {
+    background: $red;
+    color: $maroon;
+  }
+
+  &.maroon {
+    background: $maroon;
+    color: #eb7ab1;
+  }
+
+  &.grey {
+    background: $grey;
+    color: $black;
+  }
+
+  &.silver {
+    background: $silver;
+    color: $black;
+  }
+}
+
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+a,
+ul,
+li,
+img,
+svg {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  background: $white;
+  color: $black;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", sans-serif;
+  font-size: 32px;
+  line-height: 1.3333;
+}
+
+.small {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+a {
+  color: $grey;
+  text-decoration: none;
+}
+
+em {
+  padding: 0 0.05em;
+}
+
+
+// Grid
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 3rem auto 2rem;
+  grid-template-areas:
+    "header header header header"
+    "content content content content"
+    "footer__left footer__center footer__center footer__right";
+  grid-row-gap: 0.5rem;
+  justify-items: start;
+  align-items: center;
+  place-content: stretch;
+  height: 100vh;
+}
+
+body.title-page {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 2rem;
+  grid-template-areas:
+    "content content content content"
+    "footer__left footer__center footer__center footer__right";
+  justify-items: center;
+
+}
+
+header,
+main,
+.footer__left,
+.footer__center,
+.footer__right {
+  padding: 0 0.5rem;
+}
+
+header {
+  grid-area: header;
+  place-self: center;
+}
+
+main {
+  grid-area: content;
+  place-self: start;
+}
+
+.title-page main {
+  place-self: center;
+}
+
+.footer__left {
+  grid-area: footer__left;
+}
+
+.footer__center {
+  grid-area: footer__center;
+  justify-self: center;
+}
+
+.footer__right {
+  grid-area: footer__right;
+  justify-self: end;
+}
+
+
+// Presentation layer
+h1 {
+  color: $grey;
+  font-size: 1.5rem;
+  line-height: 1;
+
+  &.title--start-page {
+  color: $black;
+  font-size: 3rem;
+  line-height: 1.1;
+  text-align: center;
+  }
+}
+
+h5.subtitle--start_page {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+p {
+  max-width: $max-container-width;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: $max-container-width;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+  padding: 0.25rem 0.75rem;
+  background: $silver;
+
+  &.no-margin {
+    margin-bottom: none !important;
+  }
+
+  @include colors;
+
+}
+
+.tag {
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  margin: 0 0.1rem;
+  padding: 0 0.25rem;
+  background: $navy;
+  color: $white;
+
+  &.no-margin {
+    margin-bottom: none !important;
+  }
+
+  @include colors;
+
+}
+
+.container:last-child,
+.tag:last-child {
+  margin-bottom: 0.1rem;
+}
+
+ul {
+  padding-left: 0.75rem;
+}
+
+.icon {
+  max-height: 1em;
+  width: auto;
+  margin-left: 0.4rem;
+
+  svg {
+    max-height: 1em;
+    width: auto;
+    fill: currentColor;
+    vertical-align: text-bottom;
+  }
+}
+
+.icon:first-child {
+  margin-left: 0;
+}

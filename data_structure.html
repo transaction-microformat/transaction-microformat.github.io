@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Proposal for a microformat for transactions</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+
+  <meta name="description" content="Proposal for a microformat/markup for contract data.">
+  <meta name="language" content="en">
+  <meta name="robots" content="index,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+  <header id="header" class="">
+    <h1 class="title">Data Structure in Microformats</h1>
+  </header><!-- /header -->
+  <main>
+    We can already use microformats for some of the data points:
+    <div class="container">
+      <p>
+        <span class="icon">💁🏻‍♀️</span> Mary sells a <span class="icon">📠</span> scanner to <span class="icon">💁‍♂️</span> Marc for <span class="icon">💶</span> EUR 80
+      </p>
+      <p>
+        <span class="icon">👉</span> data points:
+      </p>
+      <div class="container red">
+        Parties: <span class="tag maroon">👨‍👩‍👧 h-card</span>
+        <div class="container maroon">
+          <span class="icon">💁🏻‍♀️</span> Mary
+        </div>
+        <div class="container maroon">
+          <span class="icon">💁‍♂️</span> Marc
+        </div>
+      </div>
+      <div class="container grey">
+        Transaction type:
+        <div class="container blue">
+          Sale 👉 Transfer of ownership and transfer of money
+        </div>
+      </div>
+      <div class="container red">
+        Object: <span class="tag maroon">📦 h-product</span>
+        <div class="container maroon">
+          <span class="icon">📠</span> Scanner
+        </div>
+      </div>
+      <div class="container red">
+        Price: <span class="tag maroon">📦 h-product (partially)</span>
+        <div class="container maroon">
+          <span class="icon">💶</span> Currency: EUR
+        </div>
+        <div class="container maroon">
+          <span class="icon">💸</span> Amount: 80
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <div class="footer__left">
+
+    </div>
+    <div class="footer__center">
+
+    </div>
+    <div class="footer__right">
+      <a href="microformat_structure.html">
+        ▶️
+      </a>
+    </div>
+</body>
